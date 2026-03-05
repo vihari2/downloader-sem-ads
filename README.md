@@ -4,7 +4,7 @@ Um web app simples e funcional para baixar vídeos e Reels do Instagram diretame
 
 ---
 
-## 🚀 Objetivo Principal
+## 🚀 Objetivo 
 Permitir que o usuário cole o link de um vídeo do Instagram, clique em um botão e o download comece automaticamente na sua máquina.
 
 ## 🛠️ Tecnologias e Estrutura
