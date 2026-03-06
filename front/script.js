@@ -9,7 +9,7 @@ form.onsubmit = async (e) => {
   const url = input.value;
   if (!url) return alert("Por favor, cole um link!");
 
-  submitBtn.innerText = "⏳ Processando...";
+  submitBtn.innerText = " Processando...";
   submitBtn.disabled = true;
 
   try {
