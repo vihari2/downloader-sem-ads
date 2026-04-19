@@ -8,7 +8,13 @@ import os
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": "https://vihari2.github.io"}})
+CORS(
+    app,
+    resources={r"/*": {"origins": "https://vihari2.github.io"}},
+    supports_credentials=True,
+    allow_headers=["Content-Type"],
+    methods=["GET", "POST", "OPTIONS"]
+)
 
 
 @app.route("/", methods=["GET"])
