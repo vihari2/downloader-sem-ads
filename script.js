@@ -13,7 +13,7 @@ form.onsubmit = async (e) => {
   submitBtn.disabled = true;
 
   try {
-    const response = await fetch("https://downloader-sem-ads-production.up.railway.app", {
+    const response = await fetch("https://downloader-sem-ads-production.up.railway.app/download", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
