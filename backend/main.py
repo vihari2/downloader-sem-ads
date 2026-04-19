@@ -8,8 +8,7 @@ import os
 
 app = Flask(__name__)
 
-ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "*")
-CORS(app, resources={r"/*": {"origins": ALLOWED_ORIGIN}})
+CORS(app, resources={r"/*": {"origins": "https://vihari2.github.io"}})
 
 
 @app.route("/", methods=["GET"])
