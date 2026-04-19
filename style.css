@@ -1,23 +1,48 @@
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+:root {
+  --bg: #0e0e0f;
+  --surface: #18181a;
+  --surface2: #222224;
+  --border: rgba(255, 255, 255, 0.08);
+  --border2: rgba(255, 255, 255, 0.14);
+  --text: #f0ede8;
+  --muted: #888784;
+  --accent: #e1306c;
+  --accent2: #f77737;
+  --grad: linear-gradient(
+    135deg,
+    #f09433,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888
+  );
 }
 
-html,
-body {
-  overflow: hidden;
+html {
+  height: 100%;
 }
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 4rem;
+  overflow: hidden;
+  justify-content: center;
+}
+
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: white;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -29,7 +54,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 .form__block-btn {
   display: flex;
@@ -39,7 +63,8 @@ body {
 }
 
 .form__block-btn button {
-  background: #f0f0f0;
+  background: var(--surface2);
+  color: var(--text);
   border: 1px solid #ddd;
   padding: 6px 12px;
   border-radius: 8px;
@@ -55,33 +80,36 @@ body {
 }
 
 .form__submit {
-  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-  box-shadow: 0 4px 15px rgba(131, 58, 180, 0.3);
+  background: var(--grad);
+  border: none;
   transition:
     transform 0.2s,
     filter 0.2s;
-  color: #f0f0f0;
-  padding: 6px 12px;
-  font-size: 1.3rem;
+  color: var(--text);
+  padding: 12px 12px;
+  font-size: 1.2rem;
   cursor: pointer;
   gap: 5px;
   border-radius: 10px;
-  margin-top: 10px;
+
 }
 .form__block-btn button:hover {
-  background: #e0e0e0;
+  filter: brightness(1.1);
+  transform: translateY(-2px);
 }
 
 input {
   min-width: 30vw;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--text);
   border-radius: 12px;
-  padding: 4px;
-  margin: 5px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
 }
 
 h1 {
   font-size: 2rem;
-  font-family: Montserrat, Geneva, Tahoma, sans-serif;
   padding: 0;
   margin: 0;
 }
