@@ -1,21 +1,21 @@
-# 📸 InstaDownloader
+# InstaDownloader
 
 Um web app simples e funcional para baixar vídeos e Reels do Instagram diretamente no celular ou computador.
 
 ---
 
-## 🚀 Objetivo 
+## Objetivo 
 Permitir que o usuário cole o link de um vídeo do Instagram, clique em um botão e o download comece automaticamente na sua máquina.
 
-## 🛠️ Tecnologias e Estrutura
+## Tecnologias e Estrutura
 O projeto utiliza uma arquitetura **Frontend + Backend (API)** para contornar as restrições de segurança do Instagram.
 
-### 🌐 Frontend
+### Frontend
 - **HTML5 / CSS3 / JavaScript**
 - Interface responsiva (funciona em qualquer tela).
 - Captura a URL do vídeo e faz a chamada para o servidor.
 
-### ⚙️ Backend
+### Backend
 - **Python (Flask)** 
 - **Biblioteca:** `yt-dlp`
 
