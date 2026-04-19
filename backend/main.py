@@ -74,8 +74,8 @@ def download():
 
     except yt_dlp.utils.DownloadError as e:
         msg = str(e)
-        if "Private" in msg or "login" in msg.lower():
-            return jsonify({"error": "Este perfil é privado ou requer login."}), 403
+        if "Private" in msg.lower():
+            return print("ERRO YT-DLP:", msg)
         return jsonify({"error": "Não foi possível processar esse link."}), 500
 
     except Exception as e:
@@ -85,3 +85,4 @@ def download():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
