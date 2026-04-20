@@ -74,9 +74,12 @@ def download():
 
     except yt_dlp.utils.DownloadError as e:
         msg = str(e)
-        if "Private" in msg.lower():
-            return print("ERRO YT-DLP:", msg)
-        return jsonify({"error": "Não foi possível processar esse link."}), 500
+        if "This video is private" in msg:
+            return jsonify({"error": "Este vídeo é privado."}), 403
+        elif "This video is unavailable" in msg:
+            return jsonify({"error": "Este vídeo está indisponível."}), 404
+        else:
+            return jsonify({"error": "Erro ao processar o link: " + msg}), 400
 
     except Exception as e:
         return jsonify({"error": "Erro interno: " + str(e)}), 500

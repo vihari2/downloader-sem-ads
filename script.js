@@ -49,11 +49,11 @@ form.onsubmit = async (e) => {
   }
 };
 
-pasteBtn.onclick = async () => {
-  try {
+pasteBtn.addEventListener("click", async () => {
+  try{
     const text = await navigator.clipboard.readText();
     input.value = text;
   } catch (err) {
     alert("Não foi possível acessar a área de transferência.");
   }
-};
+});
